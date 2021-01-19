@@ -1,0 +1,170 @@
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again
+$ tache third.txt
+bash: tache: command not found
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again
+$ tache third.txt
+bash: tache: command not found
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again
+$ touch third.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again
+$ git init
+Initialized empty Git repository in C:/Users/ACER/Desktop/learn_git_again/.git/
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git add third.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) 8b0890a] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 8b0890a67e370da29e96ace299471a5d76a4dc2e (HEAD -> master)
+Author: mohamed <zghidi.med@gmail.com>
+Date:   Tue Jan 19 14:19:46 2021 +0100
+
+    adding third.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ touch fourth.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git add fourth.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master 4337677] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git rm third.txt
+rm 'third.txt'
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "removing third.txt"
+[master 7619cec] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 7619cec5358d03cdd72904ac3bf6dce784e07902 (HEAD -> master)
+Author: mohamed <zghidi.med@gmail.com>
+Date:   Tue Jan 19 14:26:24 2021 +0100
+
+    removing third.txt
+
+commit 43376770460bb3804621b3450c0e36721c7a4244
+Author: mohamed <zghidi.med@gmail.com>
+Date:   Tue Jan 19 14:22:22 2021 +0100
+
+    adding fourth.txt
+
+commit 8b0890a67e370da29e96ace299471a5d76a4dc2e
+Author: mohamed <zghidi.med@gmail.com>
+Date:   Tue Jan 19 14:19:46 2021 +0100
+
+    adding third.txt
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --gobal core.pager cat
+error: unknown option `gobal'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+ACER@ACER-PC MINGW64 ~/Desktop/learn_git_again (master)
+$
